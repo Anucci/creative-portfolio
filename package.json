@@ -1,0 +1,25 @@
+{
+  "name": "creative-portfolio",
+  "version": "1.0.0",
+  "description": "A modern, interactive portfolio website built from scratch as part of a 30-day learning journey.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anucci/creative-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Anucci/creative-portfolio/issues"
+  },
+  "homepage": "https://github.com/Anucci/creative-portfolio#readme",
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}
