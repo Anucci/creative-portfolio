@@ -1,18 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Creative Portfolio - Interactive 3D Web Experience">
-  <title>Creative Portfolio</title>
-  <link rel="stylesheet" href="./styles/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative portfolio showcasing web development and 3D design projects">
+    <meta name="author" content="Your Name">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Your Name - Creative Developer">
+    <meta property="og:description" content="Portfolio showcasing interactive web experiences">
+    <meta property="og:image" content="/assets/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+    
+    <title>Your Name - Creative Developer</title>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./src/styles/main.css">
 </head>
 <body>
-  <main id="app">
-    <h1>Creative Portfolio</h1>
-    <p>Coming soon...</p>
-  </main>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <script type="module" src="./scripts/main.js"></script>
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <nav class="main-nav" aria-label="Main navigation">
+            <div class="nav-brand">
+                <a href="/" aria-label="Home">YourName</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-greeting">Hi, I'm</span>
+                    <span class="hero-name">Your Name</span>
+                </h1>
+                <p class="hero-subtitle">Creative Developer & 3D Enthusiast</p>
+                <p class="hero-description">
+                    I build interactive web experiences that blend design, 
+                    code, and creativity.
+                </p>
+                <div class="hero-cta">
+                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <!-- 3D Canvas will go here later -->
+            <div class="hero-canvas" id="hero-canvas"></div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            I'm a creative developer passionate about pushing the boundaries 
+                            of web technology. With a focus on interactive experiences, 
+                            I combine modern JavaScript, 3D graphics, and thoughtful design 
+                            to create memorable digital products.
+                        </p>
+                        <p>
+                            Currently learning Three.js and WebGL to bring immersive 
+                            3D experiences to the web.
+                        </p>
+                    </div>
+                    <div class="about-image">
+                        <img src="./assets/profile.jpg" alt="Your Name" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work/Projects Section -->
+        <section class="work" id="work">
+            <div class="container">
+                <h2 class="section-title">Featured Work</h2>
+                
+                <div class="projects-grid">
+                    <!-- Project Card 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/project-1.jpg" alt="Project 1" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project Title 1</h3>
+                            <p class="project-description">
+                                A brief description of the project and the technologies used.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Project →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/project-2.jpg" alt="Project 2" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project Title 2</h3>
+                            <p class="project-description">
+                                Another project showcasing different skills and technologies.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Three.js</span>
+                                <span class="tag">WebGL</span>
+                                <span class="tag">GSAP</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Project →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/projects/project-3.jpg" alt="Project 3" loading="lazy">
+                        </div>
+                        <div class="project-info">
+                            <h3 class="project-title">Project Title 3</h3>
+                            <p class="project-description">
+                                Third project demonstrating your range of capabilities.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">View Project →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills" id="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Tools</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                            <li>Three.js</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Animation</h3>
+                        <ul>
+                            <li>GSAP</li>
+                            <li>CSS Animations</li>
+                            <li>WebGL Shaders</li>
+                            <li>Scroll Effects</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <h3>Tools</h3>
+                        <ul>
+                            <li>Git & GitHub</li>
+                            <li>Vite</li>
+                            <li>Figma</li>
+                            <li>VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                
+                <div class="contact-content">
+                    <div class="contact-text">
+                        <p>
+                            I'm always interested in hearing about new projects and 
+                            opportunities. Feel free to reach out!
+                        </p>
+                    </div>
+                    
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" aria-label="GitHub">GitHub</a>
+                    <a href="https://linkedin.com/in/yourusername" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="https://twitter.com/yourusername" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Your Name. Built with passion and Three.js.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./src/scripts/main.js" type="module"></script>
 </body>
 </html>
